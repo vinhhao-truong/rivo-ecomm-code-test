@@ -11,7 +11,7 @@ const Container: React.FC<ContainerProps> = ({
   style,
 }) => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mx-4">
       <div
         className={`${getClassNames(className)} max-w-[1377px] w-full`}
         id={getId(id)}

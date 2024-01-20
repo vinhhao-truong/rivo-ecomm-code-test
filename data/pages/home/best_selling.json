@@ -1,0 +1,31 @@
+{
+  "heading": {
+    "heading": "Best selling",
+    "content": "Get in on the trend with our curated selection of best-selling styles."
+  },
+  "content": {
+    "products": [
+      {
+        "name": "Regular Fit Long Sleeve Top",
+        "price": 38.99,
+        "rating": 5,
+        "imgURL": "/images/pages/home/best_selling/regular_fit_long_sleeve_top.webp",
+        "cardColor": "#93B9A2"
+      },
+      {
+        "name": "Black Crop Tailored Jacket",
+        "price": 62.99,
+        "rating": 4.9,
+        "imgURL": "/images/pages/home/best_selling/black_crop_tailored_jacket.webp",
+        "cardColor": "#A9D4BA"
+      },
+      {
+        "name": "Textured Sunset Shirt",
+        "price": 49.99,
+        "rating": 5,
+        "imgURL": "/images/pages/home/best_selling/textured_sunset_shirt.webp",
+        "cardColor": "#CADCD0"
+      }
+    ]
+  }
+}

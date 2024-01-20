@@ -18,8 +18,9 @@ const Card: React.FC<ReactProps> = ({ children, className }) => {
         className
       )} relative w-[570px] h-[717px] rounded-tl-[141px] rounded-tr-[45px] rounded-br-[150px] rounded-bl-[82px]`}
     >
-      <DotPattern className="absolute top-0 right-0" row={7} col={2} />
+      <DotPattern className="absolute top-[155px] right-[12px]" />
       {children}
+      <DotPattern className="absolute top-[524px] left-[24px]" />
     </div>
   );
 };
@@ -27,7 +28,14 @@ const Card: React.FC<ReactProps> = ({ children, className }) => {
 const HeroRight = () => {
   return (
     <Card className="">
-      <Image src={imageURL} alt="hero_right_img" fill />
+      <Image
+        src={imageURL}
+        alt="hero_right_img"
+        fill
+        style={{
+          objectFit: "contain",
+        }}
+      />
     </Card>
   );
 };

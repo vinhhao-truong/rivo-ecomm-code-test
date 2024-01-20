@@ -18,6 +18,7 @@ const config: Config = {
         "system-green-2": "#224F34",
       },
       fontFamily: {
+        poppins: ['"Poppins"', "sans-serif"],
         "roboto-slab": ['"Roboto Slab"', "serif"],
         rufina: ['"Rufina"', "serif"],
       },

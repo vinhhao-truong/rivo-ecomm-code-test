@@ -8,7 +8,7 @@ import React from "react";
 const Home = () => {
   return (
     <main>
-      <Hero />
+      <Hero className="mb-[77px]" />
       <BestSelling />
       <OurProducts />
       <ExclusiveOffer />

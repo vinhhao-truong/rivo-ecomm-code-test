@@ -48,8 +48,6 @@ const DotPattern: React.FC<DotPatternProps> = ({
             currentYCount * parseInt(yGap)
           ).toString();
 
-          console.log(`cx: ${cx}`, `cy: ${cy}`);
-
           return (
             <circle cx={cx} cy={cy} r={dotRadius} fill={color} key={uuidv4()} />
           );
