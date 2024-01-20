@@ -19,6 +19,7 @@ const config: Config = {
       },
       fontFamily: {
         "roboto-slab": ['"Roboto Slab"', "serif"],
+        rufina: ['"Rufina"', "serif"],
       },
     },
   },

@@ -1,0 +1,11 @@
+{
+  "left": {
+    "heading": "Discover and Find Your Own Fashion!",
+    "content": "Explore our curated collection of stylish clothing and accessories tailored to your unique taste.",
+    "button": "Explore Now"
+  },
+  "right": {
+    "imageURL": "/images/pages/home/hero_right.webp",
+    "cardColor": "#6BC785"
+  }
+}
