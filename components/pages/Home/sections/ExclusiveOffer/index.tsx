@@ -11,7 +11,7 @@ const ExclusiveOffer = () => {
       style={{
         backgroundColor: exclusiveOfferData.backgroundColor,
       }}
-      className="h-[596px] rounded-[3px] flex justify-between pl-[81px] pr-[121px] relative"
+      className="h-[596px] rounded-[3px] flex justify-between pl-[81px] pr-[121px] relative mb-[167px]"
     >
       {/* slight green rect on bottom left side */}
       <div className="absolute w-[190px] h-[131px] bg-[#DFFBEA]/50 top-[404px] left-[98px]" />

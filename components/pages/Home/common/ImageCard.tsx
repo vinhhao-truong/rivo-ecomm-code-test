@@ -1,4 +1,5 @@
 import ReactProps from "@/interfaces/ReactProps";
+import { getClassNames } from "@/utils/common/getAttribs";
 import Image from "next/image";
 import React from "react";
 
@@ -16,28 +17,20 @@ const ImageCard: React.FC<ImageCardProps> = ({
   width,
   height,
   title = "image card",
+  className,
 }) => {
   return (
-    <div
+    <Image
       style={{
-        height: height,
-        width: width,
         backgroundColor: backgroundColor,
         borderRadius: "3px",
       }}
-      className="relative"
-    >
-      <Image
-        style={{
-          objectPosition: "bottom",
-        }}
-        src={imageURL}
-        alt={`alt: ${title}`}
-        width={width}
-        height={height}
-        className="absolute bottom-0 left-1/2 -translate-x-1/2"
-      />
-    </div>
+      src={imageURL}
+      alt={`alt: ${title}`}
+      width={width}
+      height={height}
+      className={`${getClassNames(className)}`}
+    />
   );
 };
 
