@@ -15,7 +15,7 @@ const BestSelling = () => {
     <Container className="flex flex-col items-center mb-[78px]">
       <SectionHeading heading={heading.heading} content={heading.content} />
       {/* PRODUCTS */}
-      <ul className="flex items-center justify-between mb-[40px] gap-[43px]">
+      <ul className="grid grid-cols-3 mb-[40px] gap-[43px]">
         {content.products.slice(0, numberOfProd).map((prod, idx) => {
           return (
             <li key={`best_selling_${idx}`}>

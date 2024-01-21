@@ -35,6 +35,7 @@ const HeroRight = () => {
         style={{
           objectFit: "contain",
         }}
+        sizes=""
       />
     </Card>
   );
