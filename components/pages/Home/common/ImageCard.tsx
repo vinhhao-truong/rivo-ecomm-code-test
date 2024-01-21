@@ -2,6 +2,7 @@ import ReactProps from "@/interfaces/ReactProps";
 import { getClassNames } from "@/utils/common/getAttribs";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 interface ImageCardProps extends ReactProps {
   backgroundColor?: string;
@@ -19,8 +20,13 @@ const ImageCard: React.FC<ImageCardProps> = ({
   title = "image card",
   className,
 }) => {
+  const MotionImage = motion(Image);
+
   return (
-    <Image
+    <MotionImage
+      whileHover={{
+        scale: 1.05,
+      }}
       style={{
         backgroundColor: backgroundColor,
         borderRadius: "3px",

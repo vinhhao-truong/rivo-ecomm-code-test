@@ -10,9 +10,9 @@ const Hero: React.FC<ReactProps> = ({ className }) => {
     <section
       className={`${getClassNames(
         className
-      )} h-[1117px] bg-system-green-1 pt-[124px]`}
+      )} h-[1007px] bg-system-green-1 pt-[124px]`}
     >
-      <Container className="flex justify-between">
+      <Container className="flex justify-between flex-none gap-2">
         <HeroLeft />
         <HeroRight />
       </Container>

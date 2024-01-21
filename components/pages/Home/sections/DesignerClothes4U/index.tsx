@@ -12,7 +12,7 @@ const DesignerClothes4U = () => {
   return (
     <Container className="mb-[544px]">
       <SectionHeading heading={heading.heading} content={heading.content} />
-      <ul className="grid grid-cols-3 gap-[44px]">
+      <ul className="grid grid-cols-3 lg:gap-[24px] xl:gap-[44px]">
         {content.designs
           .slice(0, designCount)
           .map(({ product, description, imageURL, backgroundColor }, idx) => {

@@ -13,10 +13,11 @@ const Card: React.FC<ReactProps> = ({ children, className }) => {
       style={{
         backgroundColor: cardColor,
         boxShadow: "inset 6px 4px 26px hsla(0, 0%, 0%, 0.12)",
+        width: `${(570 / 1117) * 100}%`,
       }}
       className={`${getClassNames(
         className
-      )} relative w-[570px] h-[717px] rounded-tl-[141px] rounded-tr-[45px] rounded-br-[150px] rounded-bl-[82px]`}
+      )} relative h-[717px] rounded-tl-[126px] xl:rounded-tl-[141px] rounded-tr-[45px] rounded-br-[110px] xl:rounded-br-[150px] rounded-bl-[82px]`}
     >
       <DotPattern className="absolute top-[155px] right-[12px]" />
       {children}
@@ -34,6 +35,8 @@ const HeroRight = () => {
         fill
         style={{
           objectFit: "contain",
+          objectPosition: "bottom",
+          zIndex: 1,
         }}
         sizes=""
       />

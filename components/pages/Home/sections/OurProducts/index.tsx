@@ -12,7 +12,7 @@ const OurProducts = () => {
   return (
     <Container className="mb-[142px]">
       <SectionHeading heading={heading.heading} content={heading.content} />
-      <ul className="grid grid-cols-4 gap-[35px]">
+      <ul className="grid grid-cols-4 lg:gap-x-[12px] xl:gap-x-[35px] lg:gap-y-[75px] xl:gap-y-[85px]">
         {content.products.slice(0, prodAmount).map((prod, idx) => {
           return (
             <li className="h-full" key={`our_products_${idx}`}>
@@ -20,7 +20,7 @@ const OurProducts = () => {
                 imgProps={{
                   width: 318,
                   height: 378,
-                  gapWithInfo: "36px",
+                  tailwindGap: "lg:gap-[28px] xl:gap-[36px]",
                   bgColor: prod.cardColor,
                 }}
                 product={prod}

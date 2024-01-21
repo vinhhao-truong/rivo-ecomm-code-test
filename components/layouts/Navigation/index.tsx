@@ -54,7 +54,7 @@ const Navigation = () => {
             <RivoLogo />
           </NextLink>
           {/* NAV (use absolute and make it absolutely center, not rely on flex) */}
-          <nav className="absolute flex items-center gap-[52px] justify-between -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+          <nav className="absolute flex items-center lg:gap-[35px] xl:gap-[52px] justify-between -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
             {navigationList.map(({ href, title }, idx) => {
               const isHovered = idx === hoveredNavIdx;
 
@@ -81,7 +81,7 @@ const Navigation = () => {
             })}
           </nav>
           {/* CART AND LOGIN */}
-          <div className="flex items-center gap-[57px]">
+          <div className="flex items-center gap-[30px] xl:gap-[57px]">
             <button>
               <ShoppingCartAdd />
             </button>
