@@ -6,6 +6,7 @@ import RivoLogo from "@/components/svg/RivoLogo";
 import ShoppingCartAdd from "@/components/svg/ShoppingCartAdd";
 import navigationList from "@/data/navigation_list.json";
 import { useMotionValueEvent, useScroll, motion } from "framer-motion";
+import { FiLogIn as LoginIcon } from "react-icons/fi";
 
 const Navigation = () => {
   const { scrollY } = useScroll();
@@ -67,6 +68,7 @@ const Navigation = () => {
                   <MotionLink className="" href={href}>
                     {title}
                   </MotionLink>
+                  {/* nav link underline */}
                   <motion.div
                     animate={{
                       x: isHovered ? "-20%" : "-110%",
@@ -83,7 +85,12 @@ const Navigation = () => {
             <button>
               <ShoppingCartAdd />
             </button>
-            <Button width="142px" height="52px" type="Outlined">
+            <Button
+              hoverIcon={<LoginIcon />}
+              width="142px"
+              height="52px"
+              type="Outlined"
+            >
               LOGIN
             </Button>
           </div>
