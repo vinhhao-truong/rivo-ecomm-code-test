@@ -1,0 +1,66 @@
+{
+  "heading": {
+    "heading": "Our Products",
+    "content": "Get in on the trend with our curated selection of best-selling styles."
+  },
+  "content": {
+    "products": [
+      {
+        "name": "Spread Collar Shirt",
+        "price": 48.99,
+        "rating": 5,
+        "imgURL": "/images/pages/home/our_products/spread_collar_shirt.webp",
+        "cardColor": "#D9D9D9"
+      },
+      {
+        "name": "White Solid Formal Shirt",
+        "price": 39,
+        "rating": 4.9,
+        "imgURL": "/images/pages/home/our_products/white_solid_formal_shirt.webp",
+        "cardColor": "#EAEBF0"
+      },
+      {
+        "name": "Shine On Me Blouse",
+        "price": 42.99,
+        "rating": 4.8,
+        "imgURL": "/images/pages/home/our_products/shine_on_me_blouse.webp",
+        "cardColor": "#F2F2F2"
+      },
+      {
+        "name": "Gray Solid Padded Jacket",
+        "price": 32.99,
+        "rating": 4.7,
+        "imgURL": "/images/pages/home/our_products/gray_solid_padded_jacket.webp",
+        "cardColor": "#D9D9D9"
+      },
+      {
+        "name": "Printed Loose T-shirt",
+        "price": 39.99,
+        "rating": 5,
+        "imgURL": "/images/pages/home/our_products/printed_loose_tshirt.webp",
+        "cardColor": "#D9D9D9"
+      },
+      {
+        "name": "Summer Wind Crop Shirt",
+        "price": 39.95,
+        "rating": 4.7,
+        "imgURL": "/images/pages/home/our_products/summer_wind_crop_shirt.webp",
+        "cardColor": "#EAEBF0"
+      },
+      {
+        "name": "Tailored Jacket",
+        "price": 46,
+        "rating": 4.9,
+        "imgURL": "/images/pages/home/our_products/tailored_jacket.webp",
+        "cardColor": "#F2F2F2"
+      },
+      {
+        "name": "Solid Round Neck T-shirt",
+        "price": 36,
+        "rating": 5,
+        "imgURL": "/images/pages/home/our_products/solid_round_neck_tshirt.webp",
+        "cardColor": "#D9D9D9"
+      }
+    ]
+  }
+}

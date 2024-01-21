@@ -18,16 +18,26 @@ const ImageCard: React.FC<ImageCardProps> = ({
   title = "image card",
 }) => {
   return (
-    <Image
+    <div
       style={{
+        height: height,
+        width: width,
         backgroundColor: backgroundColor,
         borderRadius: "3px",
       }}
-      src={imageURL}
-      alt={`alt: ${title}`}
-      width={width}
-      height={height}
-    />
+      className="relative"
+    >
+      <Image
+        style={{
+          objectPosition: "bottom",
+        }}
+        src={imageURL}
+        alt={`alt: ${title}`}
+        width={width}
+        height={height}
+        className="absolute bottom-0 left-1/2 -translate-x-1/2"
+      />
+    </div>
   );
 };
 
