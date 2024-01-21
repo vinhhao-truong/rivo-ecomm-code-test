@@ -1,0 +1,12 @@
+{
+  "left": {
+    "imageURL": "/images/pages/home/exclusive_offer/offer.webp"
+  },
+  "right": {
+    "heading": "Exclusive offer",
+    "content": "Unlock the ultimate style upgrade with our exclusive offer Enjoy savings of up to 40% off on our latest New Arrivals",
+    "endTime": "2024-01-21T17:00:00.000Z",
+    "button": "BUY NOW"
+  },
+  "backgroundColor": "#C2EFD4"
+}
