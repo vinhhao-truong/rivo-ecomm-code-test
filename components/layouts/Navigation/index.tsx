@@ -61,7 +61,7 @@ const Navigation = () => {
               const isHovered = idx === hoveredNavIdx;
 
               return (
-                <li
+                <div
                   onMouseEnter={() => setHoverNavIdx(idx)}
                   onMouseLeave={() => setHoverNavIdx(null)}
                   key={`nav-${idx}`}
@@ -78,7 +78,7 @@ const Navigation = () => {
                     }}
                     className="absolute h-[2px] bottom-0 w-full bg-system-green-2 rounded-lg"
                   ></motion.div>
-                </li>
+                </div>
               );
             })}
           </nav>
