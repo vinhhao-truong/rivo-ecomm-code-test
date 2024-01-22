@@ -5,7 +5,7 @@
     "button": "Explore Now"
   },
   "right": {
-    "imageURL": "/images/pages/home/hero_right.webp",
+    "imageURL": "/images/pages/home/hero/hero_right.webp",
     "cardColor": "#6BC785"
   }
 }

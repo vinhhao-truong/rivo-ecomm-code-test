@@ -13,7 +13,8 @@ const Card: React.FC<ReactProps> = ({ children, className }) => {
       style={{
         backgroundColor: cardColor,
         boxShadow: "inset 6px 4px 26px hsla(0, 0%, 0%, 0.12)",
-        width: `${(570 / 1117) * 100}%`,
+        maxWidth: `${(570 / 1117) * 100}%`,
+        width: "570px",
       }}
       className={`${getClassNames(
         className
@@ -28,7 +29,7 @@ const Card: React.FC<ReactProps> = ({ children, className }) => {
 
 const HeroRight = () => {
   return (
-    <Card className="">
+    <Card className="overflow-hidden">
       <Image
         src={imageURL}
         alt="hero_right_img"
