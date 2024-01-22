@@ -4,6 +4,7 @@ import ReactProps from "@/interfaces/ReactProps";
 import moment from "moment";
 import { getClassNames } from "@/utils/common/getAttribs";
 import Button from "../../common/Button";
+import { motion } from "framer-motion";
 
 const {
   heading,
@@ -51,9 +52,16 @@ const CountDown: React.FC<ReactProps> = ({ className }) => {
     <ul className={`${getClassNames(className)} flex gap-[35px]`}>
       {Object.keys(remaining).map((title, idx) => {
         return (
-          <li
+          <motion.li
             className="bg-white rounded-[3px] w-[100px] h-[100px] flex flex-col justify-center items-center"
             key={`ex_off_${title}`}
+            animate={{
+              scale: [1, 1.05, 1],
+              transition: {
+                duration: 3 - idx,
+                repeat: Infinity,
+              },
+            }}
           >
             <p className="font-semibold text-[32px] leading-[48px]">
               {
@@ -62,7 +70,7 @@ const CountDown: React.FC<ReactProps> = ({ className }) => {
               }
             </p>
             <p className="leading-[24px] text-[16px]">{title}</p>
-          </li>
+          </motion.li>
         );
       })}
     </ul>

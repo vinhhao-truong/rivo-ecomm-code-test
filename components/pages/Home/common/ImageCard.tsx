@@ -25,7 +25,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
   return (
     <MotionImage
       whileHover={{
-        scale: 1.05,
+        filter: "brightness(103%)",
       }}
       style={{
         backgroundColor: backgroundColor,

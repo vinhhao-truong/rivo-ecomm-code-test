@@ -16,7 +16,9 @@ interface ProductCardProps extends ReactProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, imgProps }) => {
   return (
-    <div className={`flex-col flex items-center ${imgProps.tailwindGap}`}>
+    <div
+      className={`flex-col flex items-center ${imgProps.tailwindGap} cursor-pointer`}
+    >
       <ImageCard
         imageURL={product.imgURL}
         width={imgProps.width}

@@ -44,9 +44,11 @@ const Navigation = () => {
             duration: 0.2,
             delay: 0.1,
           },
-          background: isUnderHero ? "white" : undefined,
         }}
         className="sticky top-0 bg-system-green-1 z-[100]"
+        style={{
+          background: isUnderHero ? "white" : undefined,
+        }}
       >
         <Container className="py-2 flex items-center justify-between text-system-green-2">
           {/* LOGO */}

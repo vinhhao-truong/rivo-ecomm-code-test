@@ -39,6 +39,7 @@ const HeroRight = () => {
           zIndex: 1,
         }}
         sizes=""
+        priority
       />
     </Card>
   );
