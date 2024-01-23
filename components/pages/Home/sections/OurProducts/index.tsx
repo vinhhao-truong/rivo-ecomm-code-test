@@ -12,7 +12,7 @@ const OurProducts = () => {
   return (
     <Container className="mb-[142px]">
       <SectionHeading heading={heading.heading} content={heading.content} />
-      <ul className="grid grid-cols-4 lg:gap-x-[12px] xl:gap-x-[35px] lg:gap-y-[75px] xl:gap-y-[85px]">
+      <ul className="grid lg:grid-cols-4 lg:gap-x-[12px] xl:gap-x-[35px] lg:gap-y-[75px] xl:gap-y-[85px]">
         {content.products.slice(0, prodAmount).map((prod, idx) => {
           return (
             <li className="h-full" key={`our_products_${idx}`}>

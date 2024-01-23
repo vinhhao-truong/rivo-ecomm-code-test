@@ -1,13 +1,14 @@
 import React from "react";
-import heroData from "@/data/pages/home/hero.json";
 import ReactProps from "@/interfaces/ReactProps";
 import { getClassNames } from "@/utils/common/getAttribs";
 import Image from "next/image";
-import DotPattern from "../../common/DotPattern";
+import DotPattern from "../../../common/DotPattern";
 
-const { cardColor, imageURL } = heroData.right;
-
-const Card: React.FC<ReactProps> = ({ children, className }) => {
+const Card: React.FC<ReactProps & { cardColor: string }> = ({
+  children,
+  className,
+  cardColor,
+}) => {
   return (
     <div
       style={{
@@ -27,9 +28,14 @@ const Card: React.FC<ReactProps> = ({ children, className }) => {
   );
 };
 
-const HeroRight = () => {
+interface HeroRightProps extends ReactProps {
+  cardColor: string;
+  imageURL: string;
+}
+
+const HeroRight: React.FC<HeroRightProps> = ({ cardColor, imageURL }) => {
   return (
-    <Card className="overflow-hidden">
+    <Card cardColor={cardColor} className="overflow-hidden">
       <Image
         src={imageURL}
         alt="hero_right_img"

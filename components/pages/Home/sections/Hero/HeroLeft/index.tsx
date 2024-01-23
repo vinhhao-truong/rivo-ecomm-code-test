@@ -1,10 +1,18 @@
 import React from "react";
-import heroData from "@/data/pages/home/hero.json";
-import Button from "../../common/Button";
+import Button from "../../../common/Button";
+import ReactProps from "@/interfaces/ReactProps";
 
-const { heading, content, button: buttonContent } = heroData.left;
+interface HeroLeftProps extends ReactProps {
+  heading: string;
+  content: string;
+  button: string;
+}
 
-const HeroLeft = () => {
+const HeroLeft: React.FC<HeroLeftProps> = ({
+  heading,
+  content,
+  button: buttonContent,
+}) => {
   return (
     <div
       style={{

@@ -3,7 +3,7 @@ import exclusiveOfferData from "@/data/pages/home/exclusive_offer.json";
 import ReactProps from "@/interfaces/ReactProps";
 import moment from "moment";
 import { getClassNames } from "@/utils/common/getAttribs";
-import Button from "../../common/Button";
+import Button from "../../../common/Button";
 import { motion } from "framer-motion";
 
 const {

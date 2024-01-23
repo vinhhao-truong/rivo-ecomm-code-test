@@ -1,8 +1,8 @@
 import Product from "@/interfaces/Product";
 import ReactProps from "@/interfaces/ReactProps";
 import React from "react";
-import ImageCard from "./ImageCard";
-import ProductInfo from "./ProductInfo";
+import ImageCard from "../ImageCard";
+import ProductInfo from "../ProductInfo";
 
 interface ProductCardProps extends ReactProps {
   product: Product;
