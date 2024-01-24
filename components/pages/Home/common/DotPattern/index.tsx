@@ -26,23 +26,25 @@ const DotPattern: React.FC<DotPatternProps> = ({
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={`${37 * col - 29}`}
-      height={`${34 * row - 26}`}
+      width={`${37 * col - 29}`} // give exact width and height wrap all the dots
+      height={`${34 * row - 26}`} // give exact width and height wrap all the dots
       fill="none"
       className={`${getClassNames(className)}`}
     >
-      {/* row 4, col */}
-
       {Array(dotCount)
         .fill("")
         .map((_, idx) => {
           const currentXCount = Math.floor(idx / row);
+
+          // gap on x-axis
           const cx = (
             parseInt(dotRadius) +
             currentXCount * parseInt(xGap)
           ).toString();
 
           const currentYCount = idx % row;
+
+          // gap on y-axis
           const cy = (
             parseInt(dotRadius) +
             currentYCount * parseInt(yGap)

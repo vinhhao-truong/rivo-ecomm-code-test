@@ -18,7 +18,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
   className,
 }) => {
   const formattedPrice = formatRoundedNum(price, 2);
-  const formattedRating = formatRoundedNum(rating);
+  const formattedRating = formatRoundedNum(rating); // 1 dec
 
   return (
     <div

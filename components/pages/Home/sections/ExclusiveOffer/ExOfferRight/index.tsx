@@ -28,6 +28,7 @@ const CountDown: React.FC<ReactProps> = ({ className }) => {
 
   const [remaining, setRemaining] = useState<Remaining>(initialRemaining);
 
+  // update remaining time every 1s
   useEffect(() => {
     const tick = setInterval(() => {
       const now = moment();
@@ -67,6 +68,7 @@ const CountDown: React.FC<ReactProps> = ({ className }) => {
               },
             }}
           >
+            {/* TIME */}
             <p className="font-semibold text-[28px] xs:text-[32px] xs:leading-[48px]">
               {
                 //@ts-ignore
@@ -75,6 +77,7 @@ const CountDown: React.FC<ReactProps> = ({ className }) => {
                   : `0${remaining[title]}`
               }
             </p>
+            {/* DIGIT */}
             <p className="leading-[24px] text-[16px]">{title}</p>
           </motion.li>
         );

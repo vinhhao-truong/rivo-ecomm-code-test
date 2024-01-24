@@ -61,8 +61,8 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => setIsHovered(true)} // hover state update
+      onMouseLeave={() => setIsHovered(false)} // hover state update
       style={{
         ...finalStyle,
       }}
@@ -74,6 +74,7 @@ const Button: React.FC<ButtonProps> = ({
     >
       <div className="flex items-center justify-center gap-1">
         {children}
+        {/* HOVER ICON (desktop only) */}
         {screenSize === "desktop" && (
           <motion.div
             animate={{ fontSize: isHovered ? "22px" : 0 }}

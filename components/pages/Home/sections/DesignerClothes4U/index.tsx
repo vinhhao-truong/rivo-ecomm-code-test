@@ -21,6 +21,7 @@ const DesignerClothes4U = () => {
                 key={`dcfy-${idx}`}
                 className="text-center text-[#373737] flex flex-col items-center"
               >
+                {/* DESIGN IMAGES */}
                 <ImageCard
                   imageURL={imageURL}
                   backgroundColor={backgroundColor}
@@ -28,6 +29,7 @@ const DesignerClothes4U = () => {
                   height={566}
                   className="mb-5 lg:mb-[25px]"
                 />
+                {/* DESIGN DESCRIPTION */}
                 <h3 className="font-semibold text-[28px] lg:text-[30px]">
                   {product}
                 </h3>

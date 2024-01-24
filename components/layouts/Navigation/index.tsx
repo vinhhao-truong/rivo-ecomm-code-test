@@ -11,14 +11,15 @@ import MobileMenuButton from "./MobileMenuButton";
 const Navigation = () => {
   const { scrollY } = useScroll();
 
-  const [isScrollDown, setIsScrollDown] = useState<boolean>(false);
-  const [position, setPosition] = useState<number>(0);
-  const [hoveredNavIdx, setHoverNavIdx] = useState<number | null>(null);
+  const [isScrollDown, setIsScrollDown] = useState<boolean>(false); // The direction of the scrolling.
+  const [position, setPosition] = useState<number>(0); // Current scrolling position in px
+  const [hoveredNavIdx, setHoverNavIdx] = useState<number | null>(null); // Mouse behaviour on with nav link being hovered
 
-  const isUnderDefaultPos = position > 135;
-  const isUnderHero = position > 1165;
+  const isUnderDefaultPos = position > 135; // After nav shown
+  const isUnderHero = position > 1165; // Under Hero section
 
   useMotionValueEvent(scrollY, "change", (latest) => {
+    // Update scrolling direction and position
     setPosition((prev) => {
       if (latest > prev) {
         setIsScrollDown(true);
@@ -36,6 +37,7 @@ const Navigation = () => {
     <>
       {/* BLANK SPACE ON TOP OF NAV */}
       <div className="md:h-[50px] bg-system-green-1"></div>
+      {/* MAIN NAVIGATION */}
       <motion.div
         animate={{
           y: isScrollDown && isUnderDefaultPos ? "-100%" : 0,
@@ -55,15 +57,15 @@ const Navigation = () => {
           <NextLink href="/">
             <RivoLogo />
           </NextLink>
-          {/* NAV (use absolute and make it absolutely center, not rely on flex) */}
+          {/* NAV LIST (use absolute and make it absolutely center, not rely on flex) */}
           <nav className="absolute hidden lg:flex items-center lg:gap-[35px] xl:gap-[52px] justify-between -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
             {navigationList.map(({ href, title }, idx) => {
               const isHovered = idx === hoveredNavIdx;
 
               return (
                 <div
-                  onMouseEnter={() => setHoverNavIdx(idx)}
-                  onMouseLeave={() => setHoverNavIdx(null)}
+                  onMouseEnter={() => setHoverNavIdx(idx)} // hover state update for entire element
+                  onMouseLeave={() => setHoverNavIdx(null)} // hover state update for entire element
                   key={`nav-${idx}`}
                   className="relative overflow-hidden list-none"
                 >

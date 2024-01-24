@@ -6,8 +6,8 @@ const ShoppingCartAdd = () => {
 
   return (
     <svg
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => setIsHovered(true)} // update hover state
+      onMouseLeave={() => setIsHovered(false)} // update hover state
       width={32}
       height={32}
       fill="none"
@@ -21,7 +21,7 @@ const ShoppingCartAdd = () => {
       </g>
       <g filter="url(#filter0_d_207_1284)">
         <motion.circle
-          animate={{ fill: isHovered ? "#224F34" : "#10FF70" }}
+          animate={{ fill: isHovered ? "#224F34" : "#10FF70" }} // the dot colour changes
           cx="27"
           cy="27"
           r="5"
