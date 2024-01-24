@@ -44,4 +44,7 @@ bun dev
 
 ## Highlights
 
-## Possible Further Improvement
+- Very high score on Lighthouse measurement.
+- Include responsiveness for tablet, mobile and very small screen (280px).
+- Slight animation for buttons, cards and countdown clock.
+- All data can be dynamically changed based on JSON files.
