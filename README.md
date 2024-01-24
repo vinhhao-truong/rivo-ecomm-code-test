@@ -3,7 +3,7 @@
 "Rivo Fashion" project, for demo purpose, is the front-end (homepage only) of a single-page e-commerce web application with the utility of modern technologies including NextJS, TailwindCSS, TypeScript and more.
 
 - Project Demo: [click here!](https://rivo-ecomm-code-test.vercel.app/)
-- Project Source Code: [click here](https://github.com/vinhhao-truong/rivo-ecomm-code-test)
+- Project Source Code: [click here!](https://github.com/vinhhao-truong/rivo-ecomm-code-test)
 
 ## Getting Started
 
