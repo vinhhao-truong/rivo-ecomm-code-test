@@ -14,7 +14,7 @@ const Card: React.FC<ReactProps & { cardColor: string }> = ({
       style={{
         backgroundColor: cardColor,
         boxShadow: "inset 6px 4px 26px hsla(0, 0%, 0%, 0.12)",
-        maxWidth: `${(570 / 1117) * 100}%`,
+        maxWidth: `${(570 / 1377) * 100}%`,
         width: "570px",
       }}
       className={`${getClassNames(

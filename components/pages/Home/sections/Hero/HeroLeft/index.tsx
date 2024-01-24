@@ -16,7 +16,7 @@ const HeroLeft: React.FC<HeroLeftProps> = ({
   return (
     <div
       style={{
-        width: `${(649 / 1117) * 100}%`,
+        width: `${(649 / 1377) * 100}%`,
       }}
       className="mt-[22px]"
     >

@@ -12,7 +12,7 @@
 1. There are two options to download the project:
 
 - Download the ZIP file directly from GitHub and extract to a folder.
-- Run `https://github.com/vinhhao-truong/rivo-ecomm-code-test.git` in the terminal.
+- Run `git clone https://github.com/vinhhao-truong/rivo-ecomm-code-test.git` in the terminal.
 
 2. Open the downloaded/extracted folder.
 3. Open the terminal and locate to the folder directory.

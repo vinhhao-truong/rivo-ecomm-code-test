@@ -10,8 +10,8 @@ interface ButtonProps extends ReactProps {
   color?: string;
   fontSize?: string;
   type: "Filled" | "Outlined";
-  width: string;
-  height: string;
+  width?: string;
+  height?: string;
   hoverIcon?: React.ReactNode;
 }
 
@@ -45,15 +45,13 @@ const Button: React.FC<ButtonProps> = ({
 
   const typeStyle = isFilled ? filledStyle : outlinedStyle;
 
-  const MotionArrow = motion(Arrow);
-
   return (
     <button
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
-        width: width,
-        height: height,
+        width: width ?? width,
+        height: height ?? height,
         fontSize: fontSize,
         ...typeStyle,
         ...getStyles(style),
