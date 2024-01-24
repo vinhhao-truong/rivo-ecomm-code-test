@@ -7,16 +7,24 @@ import { useMotionValueEvent, useScroll, motion } from "framer-motion";
 import LoginButton from "./LoginButton";
 import CartButton from "./CartButton";
 import MobileMenuButton from "./MobileMenuButton";
+import useResponsive from "@/hooks/useResponsive";
 
 const Navigation = () => {
   const { scrollY } = useScroll();
+  const screenSize = useResponsive();
+  const isTablet = screenSize === "tablet";
+  const isMobile = screenSize === "mobile";
+  const isDesktop = screenSize === "desktop";
 
   const [isScrollDown, setIsScrollDown] = useState<boolean>(false); // The direction of the scrolling.
   const [position, setPosition] = useState<number>(0); // Current scrolling position in px
   const [hoveredNavIdx, setHoverNavIdx] = useState<number | null>(null); // Mouse behaviour on with nav link being hovered
 
   const isUnderDefaultPos = position > 135; // After nav shown
-  const isUnderHero = position > 1165; // Under Hero section
+  const isUnderHero =
+    (isTablet && position > 1000) ||
+    (isMobile && position > 850) ||
+    (isDesktop && position > 1165); // Under Hero section
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     // Update scrolling direction and position
