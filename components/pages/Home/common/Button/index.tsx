@@ -31,6 +31,12 @@ const Button: React.FC<ButtonProps> = ({
   styleTablet = {},
 }) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
+  const passedStyle = useResponsiveStyle({
+    styleMobile,
+    styleTablet,
+    style,
+  });
+  const screenSize = useResponsive();
 
   const innerColor = isColorLight(color) ? "#000000" : "#FFFFFF"; //for inner text in contrast with bg
   const isFilled = type === "Filled";
@@ -46,12 +52,6 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   const typeStyle = isFilled ? filledStyle : outlinedStyle;
-
-  const passedStyle = useResponsiveStyle({
-    styleMobile,
-    styleTablet,
-    style,
-  });
 
   const finalStyle: React.CSSProperties = {
     fontSize: fontSize,
@@ -74,9 +74,14 @@ const Button: React.FC<ButtonProps> = ({
     >
       <div className="flex items-center justify-center gap-1">
         {children}
-        <motion.div animate={{ fontSize: isHovered ? "22px" : 0 }} className="">
-          {hoverIcon}
-        </motion.div>
+        {screenSize === "desktop" && (
+          <motion.div
+            animate={{ fontSize: isHovered ? "22px" : 0 }}
+            className=""
+          >
+            {hoverIcon}
+          </motion.div>
+        )}
       </div>
     </button>
   );

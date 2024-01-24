@@ -49,7 +49,11 @@ const CountDown: React.FC<ReactProps> = ({ className }) => {
   }, []);
 
   return (
-    <ul className={`${getClassNames(className)} flex gap-[35px]`}>
+    <ul
+      className={`${getClassNames(
+        className
+      )} flex justify-end lg:justify-start gap-[20px] lg:gap-[35px]`}
+    >
       {Object.keys(remaining).map((title, idx) => {
         return (
           <motion.li
@@ -79,11 +83,11 @@ const CountDown: React.FC<ReactProps> = ({ className }) => {
 
 const ExOfferRight = () => {
   return (
-    <div className="mt-[75px] text-system-green-2">
+    <div className="flex flex-col items-end lg:items-start lg:relative absolute mt-[50px] lg:mt-[75px] p-4 lg:p-0 text-system-green-2">
       <h2 className=" font-roboto-slab text-[46px] font-bold mb-5">
         {heading}
       </h2>
-      <p className="mb-10">{content}</p>
+      <p className="mb-10 text-end">{content}</p>
       <CountDown className="mb-[41px]" />
       <Button
         type="Filled"

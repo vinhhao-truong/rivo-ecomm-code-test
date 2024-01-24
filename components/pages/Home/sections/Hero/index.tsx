@@ -13,7 +13,7 @@ const Hero: React.FC<ReactProps> = ({ className }) => {
         className
       )} h-[1007px] bg-system-green-1 pt-[124px]`}
     >
-      <Container className="flex justify-between flex-none gap-2">
+      <Container className="relative flex justify-between flex-none gap-2">
         <HeroLeft {...heroData.left} />
         <HeroRight {...heroData.right} />
       </Container>

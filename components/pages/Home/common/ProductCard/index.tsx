@@ -17,18 +17,20 @@ interface ProductCardProps extends ReactProps {
 const ProductCard: React.FC<ProductCardProps> = ({ product, imgProps }) => {
   return (
     <div
-      className={`flex-col flex items-center ${imgProps.tailwindGap} cursor-pointer`}
+      className={`lg:h-full flex-col flex items-center cursor-pointer ${imgProps.tailwindGap}`}
     >
       <ImageCard
         imageURL={product.imgURL}
         width={imgProps.width}
         height={imgProps.height}
         backgroundColor={imgProps.bgColor}
+        className="row-span-3"
       />
       <ProductInfo
         name={product.name}
         price={product.price}
         rating={product.rating}
+        className="row-span-1"
       />
     </div>
   );

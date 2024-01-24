@@ -15,7 +15,7 @@ const BestSelling = () => {
     <Container className="flex flex-col items-center mb-[78px]">
       <SectionHeading heading={heading.heading} content={heading.content} />
       {/* PRODUCTS */}
-      <ul className="grid grid-cols-3 mb-[40px] lg:gap-[25px] xl:gap-[43px]">
+      <ul className="grid grid-cols-3 mb-[40px] gap-2 lg:gap-[25px] xl:gap-[43px]">
         {content.products.slice(0, numberOfProd).map((prod, idx) => {
           return (
             <li key={`best_selling_${idx}`}>
@@ -23,7 +23,7 @@ const BestSelling = () => {
                 imgProps={{
                   width: 430,
                   height: 566,
-                  tailwindGap: "lg:gap-[30px] xl:gap-[51px]",
+                  tailwindGap: "gap-3 lg:gap-[30px] xl:gap-[51px]",
                   bgColor: prod.cardColor,
                 }}
                 product={prod}
