@@ -4,29 +4,31 @@ import isColorLight from "@/utils/common/isColorLight";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { RiArrowRightDoubleFill as Arrow } from "react-icons/ri";
+import useResponsive from "@/hooks/useResponsive";
+import useResponsiveStyle from "@/hooks/useResponsiveStyle";
 
 interface ButtonProps extends ReactProps {
   onClick?: () => React.MouseEventHandler<HTMLButtonElement>;
   color?: string;
   fontSize?: string;
   type: "Filled" | "Outlined";
-  width?: string;
-  height?: string;
   hoverIcon?: React.ReactNode;
+  styleTablet?: React.CSSProperties;
+  styleMobile?: React.CSSProperties;
 }
 
 const Button: React.FC<ButtonProps> = ({
   children,
   className,
   id,
-  style,
+  style = {},
   onClick,
   color = "#224F34",
   type,
-  width,
-  height,
   fontSize = "20px",
   hoverIcon = <Arrow />,
+  styleMobile = {},
+  styleTablet = {},
 }) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
@@ -45,16 +47,24 @@ const Button: React.FC<ButtonProps> = ({
 
   const typeStyle = isFilled ? filledStyle : outlinedStyle;
 
+  const passedStyle = useResponsiveStyle({
+    styleMobile,
+    styleTablet,
+    style,
+  });
+
+  const finalStyle: React.CSSProperties = {
+    fontSize: fontSize,
+    ...passedStyle,
+    ...typeStyle,
+  };
+
   return (
     <button
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
-        width: width ?? width,
-        height: height ?? height,
-        fontSize: fontSize,
-        ...typeStyle,
-        ...getStyles(style),
+        ...finalStyle,
       }}
       id={getId(id)}
       className={`${getClassNames(
@@ -62,7 +72,7 @@ const Button: React.FC<ButtonProps> = ({
       )} rounded-[3px] flex justify-center items-center font-[500] relative`}
       onClick={onClick}
     >
-      <div className="flex justify-center items-center gap-1">
+      <div className="flex items-center justify-center gap-1">
         {children}
         <motion.div animate={{ fontSize: isHovered ? "22px" : 0 }} className="">
           {hoverIcon}

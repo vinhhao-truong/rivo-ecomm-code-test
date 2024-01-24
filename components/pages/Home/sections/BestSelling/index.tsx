@@ -33,7 +33,23 @@ const BestSelling = () => {
         })}
       </ul>
       {/* SEE ALL BTN */}
-      <Button type="Outlined" width="224px" height="65px">
+      <Button
+        type="Outlined"
+        style={{
+          width: "224px",
+          height: "65px",
+        }}
+        styleTablet={{
+          width: "160px",
+          height: "48px",
+          fontSize: "16px",
+        }}
+        styleMobile={{
+          width: "160px",
+          height: "48px",
+          fontSize: "16px",
+        }}
+      >
         See all
       </Button>
     </Container>

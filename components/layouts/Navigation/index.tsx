@@ -50,7 +50,7 @@ const Navigation = () => {
           background: isUnderHero ? "white" : undefined,
         }}
       >
-        <Container className="py-2 flex items-center justify-between text-system-green-2">
+        <Container className="flex items-center justify-between py-2 text-system-green-2">
           {/* LOGO */}
           <NextLink href="/">
             <RivoLogo />
@@ -65,7 +65,7 @@ const Navigation = () => {
                   onMouseEnter={() => setHoverNavIdx(idx)}
                   onMouseLeave={() => setHoverNavIdx(null)}
                   key={`nav-${idx}`}
-                  className="relative list-none overflow-hidden"
+                  className="relative overflow-hidden list-none"
                 >
                   <MotionLink className="" href={href}>
                     {title}
@@ -89,8 +89,20 @@ const Navigation = () => {
             </button>
             <Button
               hoverIcon={<LoginIcon />}
-              width="142px"
-              height="52px"
+              style={{
+                width: "142px",
+                height: "52px",
+              }}
+              styleTablet={{
+                width: "100px",
+                height: "40px",
+                fontSize: "16px",
+              }}
+              styleMobile={{
+                width: "100px",
+                height: "40px",
+                fontSize: "16px",
+              }}
               type="Outlined"
             >
               LOGIN

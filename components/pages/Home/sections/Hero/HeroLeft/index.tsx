@@ -26,7 +26,23 @@ const HeroLeft: React.FC<HeroLeftProps> = ({
       <p className="text-[#267D49] text-[24px] lg:leading-[45px] xl:leading-[52.8px] mb-[54px] w-[565px]">
         {content}
       </p>
-      <Button type="Filled" width="258px" height="74px">
+      <Button
+        type="Filled"
+        style={{
+          width: "258px",
+          height: "74px",
+        }}
+        styleTablet={{
+          width: "160px",
+          height: "50px",
+          fontSize: "16px",
+        }}
+        styleMobile={{
+          width: "160px",
+          height: "50px",
+          fontSize: "16px",
+        }}
+      >
         {buttonContent}
       </Button>
     </div>

@@ -85,7 +85,23 @@ const ExOfferRight = () => {
       </h2>
       <p className="mb-10">{content}</p>
       <CountDown className="mb-[41px]" />
-      <Button type="Filled" width="235px" height="74px">
+      <Button
+        type="Filled"
+        style={{
+          width: "235px",
+          height: "74px",
+        }}
+        styleTablet={{
+          width: "200px",
+          height: "60px",
+          fontSize: "16px",
+        }}
+        styleMobile={{
+          width: "200px",
+          height: "60px",
+          fontSize: "16px",
+        }}
+      >
         {buttonContent}
       </Button>
     </div>
