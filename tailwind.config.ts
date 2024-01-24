@@ -22,6 +22,9 @@ const config: Config = {
         "roboto-slab": ['"Roboto Slab"', "serif"],
         rufina: ['"Rufina"', "serif"],
       },
+      screens: {
+        xs: "350px",
+      },
     },
   },
   plugins: [],

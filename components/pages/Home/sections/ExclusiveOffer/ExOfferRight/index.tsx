@@ -52,12 +52,12 @@ const CountDown: React.FC<ReactProps> = ({ className }) => {
     <ul
       className={`${getClassNames(
         className
-      )} flex justify-end lg:justify-start gap-[20px] lg:gap-[35px]`}
+      )} flex min-[480px]:justify-end lg:justify-start gap-[10px] xs:gap-[20px] lg:gap-[35px] z-[2]`}
     >
       {Object.keys(remaining).map((title, idx) => {
         return (
           <motion.li
-            className="bg-white rounded-[3px] w-[100px] h-[100px] flex flex-col justify-center items-center"
+            className="bg-white rounded-[3px] w-[67px] xs:w-[75px] md:w-[100px] h-[67px] xs:h-[75px] md:h-[100px] flex flex-col justify-center items-center"
             key={`ex_off_${title}`}
             animate={{
               scale: [1, 1.05, 1],
@@ -67,10 +67,12 @@ const CountDown: React.FC<ReactProps> = ({ className }) => {
               },
             }}
           >
-            <p className="font-semibold text-[32px] leading-[48px]">
+            <p className="font-semibold text-[28px] xs:text-[32px] xs:leading-[48px]">
               {
                 //@ts-ignore
-                remaining[title]
+                remaining[title] > 10 //@ts-ignore
+                  ? remaining[title] //@ts-ignore
+                  : `0${remaining[title]}`
               }
             </p>
             <p className="leading-[24px] text-[16px]">{title}</p>
@@ -83,11 +85,11 @@ const CountDown: React.FC<ReactProps> = ({ className }) => {
 
 const ExOfferRight = () => {
   return (
-    <div className="flex flex-col items-end lg:items-start lg:relative absolute mt-[50px] lg:mt-[75px] p-4 lg:p-0 text-system-green-2">
+    <div className="flex flex-col min-[480px]:items-end lg:items-start lg:relative absolute min-[480px]:mt-[50px] lg:mt-[75px] p-4 lg:p-0 text-system-green-2">
       <h2 className=" font-roboto-slab text-[46px] font-bold mb-5">
         {heading}
       </h2>
-      <p className="mb-10 text-end">{content}</p>
+      <p className=" min-[480px]:text-end mb-10 lg:text-start">{content}</p>
       <CountDown className="mb-[41px]" />
       <Button
         type="Filled"
@@ -105,6 +107,7 @@ const ExOfferRight = () => {
           height: "60px",
           fontSize: "16px",
         }}
+        className="z-[2]"
       >
         {buttonContent}
       </Button>

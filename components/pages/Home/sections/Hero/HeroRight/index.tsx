@@ -4,6 +4,7 @@ import { getClassNames } from "@/utils/common/getAttribs";
 import Image from "next/image";
 import DotPattern from "../../../common/DotPattern";
 import useResponsive from "@/hooks/useResponsive";
+import { useMediaQuery } from "@mui/material";
 
 const Card: React.FC<ReactProps & { cardColor: string }> = ({
   children,
@@ -12,6 +13,7 @@ const Card: React.FC<ReactProps & { cardColor: string }> = ({
 }) => {
   const screenSize = useResponsive();
   const isDesktop = screenSize === "desktop";
+  const isMobileAbove = useMediaQuery("(min-width:350px)");
 
   return (
     <div
@@ -24,9 +26,13 @@ const Card: React.FC<ReactProps & { cardColor: string }> = ({
         className
       )} relative lg:w-[570px] w-full h-[717px] rounded-tl-[126px] xl:rounded-tl-[141px] rounded-tr-[45px] rounded-br-[110px] xl:rounded-br-[150px] rounded-bl-[82px]`}
     >
-      <DotPattern className="absolute top-[155px] right-[12px]" />
+      {isMobileAbove && (
+        <DotPattern className="absolute top-[155px] right-[12px]" />
+      )}
       {children}
-      <DotPattern className="absolute top-[524px] left-[24px]" />
+      {isMobileAbove && (
+        <DotPattern className="absolute top-[524px] left-[24px]" />
+      )}
     </div>
   );
 };
@@ -40,6 +46,8 @@ const HeroRight: React.FC<HeroRightProps> = ({ cardColor, imageURL }) => {
   const screenSize = useResponsive();
   const isDesktop = screenSize === "desktop";
   const isMobile = screenSize === "mobile";
+  const isTablet = screenSize === "tablet";
+  const isMobileBelow = useMediaQuery("(max-width:350px)");
 
   return (
     <Card cardColor={cardColor} className="relative overflow-hidden">
@@ -54,9 +62,13 @@ const HeroRight: React.FC<HeroRightProps> = ({ cardColor, imageURL }) => {
         }}
         sizes=""
         priority
-        width={!isDesktop ? 400 : undefined}
-        height={!isDesktop ? 400 : undefined}
-        className="absolute bottom-0 right-0"
+        width={
+          isMobileBelow ? 200 : isMobile ? 350 : isTablet ? 400 : undefined
+        }
+        height={
+          isMobileBelow ? 200 : isMobile ? 350 : isTablet ? 400 : undefined
+        }
+        className="absolute bottom-0 -right-[40px] xs:-right-[100px] sm:right-0"
       />
     </Card>
   );

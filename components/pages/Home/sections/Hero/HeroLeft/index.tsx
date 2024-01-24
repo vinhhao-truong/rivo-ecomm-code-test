@@ -24,10 +24,10 @@ const HeroLeft: React.FC<HeroLeftProps> = ({
       }}
       className="top-[60px] left-[40px] absolute lg:relative lg:mt-[22px] z-[1]"
     >
-      <h1 className="font-rufina font-bold text-[48px] lg:text-[74px] xl:text-[86px] lg:leading-[95px] xl:leading-[106.21px] text-system-green-2 mb-[27px]">
+      <h1 className="font-rufina font-bold text-[30px] xs:text-[36px] sm:text-[48px] lg:text-[74px] xl:text-[86px] lg:leading-[95px] xl:leading-[106.21px] text-system-green-2 mb-[27px]">
         {heading}
       </h1>
-      <p className="text-[#267D49] lg:text-[24px] lg:leading-[45px] xl:leading-[52.8px] mb-[54px] md:w-2/3 lg:w-[565px]">
+      <p className="text-[#267D49] lg:text-[24px] lg:leading-[45px] xl:leading-[52.8px] mb-[54px] xs:w-1/2 md:w-2/3 lg:w-[565px]">
         {content}
       </p>
       <Button

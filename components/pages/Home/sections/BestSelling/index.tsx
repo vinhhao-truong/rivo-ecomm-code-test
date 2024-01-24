@@ -15,8 +15,10 @@ const BestSelling = () => {
     <Container className="flex flex-col items-center mb-[78px]">
       <SectionHeading heading={heading.heading} content={heading.content} />
       {/* PRODUCTS */}
-      <ul className="grid grid-cols-3 mb-[40px] gap-2 lg:gap-[25px] xl:gap-[43px]">
+      <ul className="grid xs:grid-cols-2 md:grid-cols-3 mb-[40px] gap-x-2 gap-y-4 lg:gap-[25px] xl:gap-[43px]">
         {content.products.slice(0, numberOfProd).map((prod, idx) => {
+          const isLastItem = idx === numberOfProd - 1;
+
           return (
             <li key={`best_selling_${idx}`}>
               <ProductCard

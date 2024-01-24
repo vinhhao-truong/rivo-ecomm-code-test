@@ -11,7 +11,7 @@ const Hero: React.FC<ReactProps> = ({ className }) => {
     <section
       className={`${getClassNames(
         className
-      )} h-[1007px] bg-system-green-1 pt-[124px]`}
+      )} h-[850px] md:h-[950px] lg:h-[1007px] bg-system-green-1 pt-[50px] md:pt-[124px]`}
     >
       <Container className="relative flex justify-between flex-none gap-2">
         <HeroLeft {...heroData.left} />

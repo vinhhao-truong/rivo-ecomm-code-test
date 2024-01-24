@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import Container from "../Container";
 import NextLink from "next/link";
-import Button from "@/components/pages/Home/common/Button";
 import RivoLogo from "@/components/svg/RivoLogo";
-import ShoppingCartAdd from "@/components/svg/ShoppingCartAdd";
 import navigationList from "@/data/navigation_list.json";
 import { useMotionValueEvent, useScroll, motion } from "framer-motion";
-import { FiLogIn as LoginIcon } from "react-icons/fi";
+import LoginButton from "./LoginButton";
+import CartButton from "./CartButton";
+import MobileMenuButton from "./MobileMenuButton";
 
 const Navigation = () => {
   const { scrollY } = useScroll();
@@ -35,7 +35,7 @@ const Navigation = () => {
   return (
     <>
       {/* BLANK SPACE ON TOP OF NAV */}
-      <div className="h-[50px] bg-system-green-1"></div>
+      <div className="md:h-[50px] bg-system-green-1"></div>
       <motion.div
         animate={{
           y: isScrollDown && isUnderDefaultPos ? "-100%" : 0,
@@ -83,30 +83,10 @@ const Navigation = () => {
             })}
           </nav>
           {/* CART AND LOGIN */}
-          <div className="flex items-center gap-[30px] xl:gap-[57px]">
-            <button>
-              <ShoppingCartAdd />
-            </button>
-            <Button
-              hoverIcon={<LoginIcon />}
-              style={{
-                width: "142px",
-                height: "52px",
-              }}
-              styleTablet={{
-                width: "100px",
-                height: "40px",
-                fontSize: "16px",
-              }}
-              styleMobile={{
-                width: "100px",
-                height: "40px",
-                fontSize: "16px",
-              }}
-              type="Outlined"
-            >
-              LOGIN
-            </Button>
+          <div className="flex items-center gap-[10px] min-[400px]:gap-[20px] md:gap-[30px] xl:gap-[57px]">
+            <CartButton />
+            <LoginButton />
+            <MobileMenuButton />
           </div>
         </Container>
       </motion.div>
